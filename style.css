@@ -1,15 +1,18 @@
+/* general styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* container box */
 .container{
     margin-top: 1rem;
     text-align: center;
     max-width: 350px;
 }
 
+/* digital clock */
 #clock-face{
     padding: 1rem;
     background-color: #333;
@@ -24,10 +27,12 @@
     padding-right: 0.5rem;
 }
 
+/* common styling for buttons */
 button{
     margin: 1rem 0;
 }
 
+/* alarm form */
 #alarm-form {
     width: 100%;
     background-color: #999;
@@ -42,6 +47,7 @@ button{
     border: none;
 }
 
+/* display list styling of all li items */
 #alarm-list {
     width: 100%;
     list-style-type: none;
