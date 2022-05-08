@@ -96,3 +96,16 @@ setAlarm.addEventListener('click', function(){
 function ringing(now){
     window.alert(`It's ${now}. click ok to turn off the alarm`);
 }
+
+// delete an alarm
+alarmList.addEventListener('click', function(event){
+    // using event delegation on ul to select the specific delete button
+    // console.log(event.target);
+
+    if(event.target.classList.contains('delete')){
+        // select the specific li
+        const targetedLi = event.target.parentNode;
+        // console.log(targetedLi);
+        targetedLi.remove();
+    }
+});
