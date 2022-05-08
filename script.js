@@ -92,9 +92,14 @@ setAlarm.addEventListener('click', function(){
     }
 });
 
-// show alert when the alarm goes off
+// alarm sound
+const sound = new Audio('./assets/audiofile/alarm-clock-beep.wav');
+sound.loop = true; // to play it repeatatively
+
+// Plays the alarm audio at correct time
 function ringing(now){
-    window.alert(`It's ${now}. click ok to turn off the alarm`);
+    sound.play();
+    window.alert(`It's ${now}`);
 }
 
 // delete an alarm
@@ -109,3 +114,8 @@ alarmList.addEventListener('click', function(event){
         targetedLi.remove();
     }
 });
+
+// turn off the alarm
+clearAlarm.addEventListener('click', function(){
+    sound.pause();
+})
