@@ -18,7 +18,7 @@
       <h1 id="current-time"></h1>
     </div>
 
-    <section>
+    <section id="alarm-form">
       <select id="hour"></select>
       <select id="minute"></select>
       <select id="second"></select>
@@ -29,8 +29,20 @@
     </section>
 
     <section>
-      <button class="btn btn-success">Set Alarm</button>
-      <button class="btn btn-danger">Turn Off</button>
+      <button id="on" class="btn btn-success">Set Alarm</button>
+      <button id="off" class="btn btn-secondary">Turn Off</button>
+    </section>
+
+    <hr>
+
+    <section>
+      <p>Alarms</p>
+      <ul id="alarm-list">
+        <!-- <li>
+          <span>11:25 AM</span>
+          <button class="btn btn-danger">Delete</button>
+        </li> -->
+      </ul>
     </section>
   </div>
 </body>

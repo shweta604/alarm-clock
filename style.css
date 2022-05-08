@@ -5,15 +5,15 @@
 }
 
 .container{
+    margin-top: 1rem;
     text-align: center;
+    max-width: 350px;
 }
 
 #clock-face{
-    margin: 1rem auto;
     padding: 1rem;
     background-color: #333;
     color: aliceblue;
-    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,4 +26,34 @@
 
 button{
     margin: 1rem 0;
+}
+
+#alarm-form {
+    width: 100%;
+    background-color: #999;
+    max-height: 100vh;
+}
+
+#hour, #minute, #second, #am-pm{
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem 0.3rem;
+    border: none;
+}
+
+#alarm-list {
+    width: 100%;
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background-color: whitesmoke;
+    padding: 0 0.5rem;
 }
