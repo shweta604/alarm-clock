@@ -10,13 +10,18 @@ const ampm = document.getElementById('am-pm');
 // contains all the set alarms
 var alarms = [];
 
-//current time
+//variable to store the current time
 var now;
 
 // displays current time of the day
 function currentTime() {
     let today = new Date(); // creating a date object with current date and time. Date objects are static. The computer time is ticking, but date objects are not.
     now = today.toLocaleTimeString(); // it is going to take the current time of the pc(local time).
+
+    // add 0 at the start for 1 am till 9 am and 1pm till 9 pm as the length of 'now' will be 10 which will create problem in matching with the alarms array elements as they contain two digit for hour e.g. 01:20:05 AM
+    if(now.length == 10){
+        now = '0' + now;
+    };
 
     // calling ringing function when now is equal to one of the element in the alarms array
     if(alarms.includes(now)){
@@ -99,7 +104,7 @@ sound.loop = true; // to play it repeatatively
 // Plays the alarm audio at correct time
 function ringing(now){
     sound.play();
-    window.alert(`It's ${now}`);
+    window.alert(`It's ${now}. click turn off button to stop the alarm`);
 }
 
 // delete an alarm
@@ -114,6 +119,9 @@ alarmList.addEventListener('click', function(event){
         targetedLi.remove();
     }
 });
+
+// remove the targeted time from the alarms array
+
 
 // turn off the alarm
 clearAlarm.addEventListener('click', function(){
