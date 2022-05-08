@@ -20,7 +20,7 @@ function currentTime() {
 
     // calling ringing function when now is equal to one of the element in the alarms array
     if(alarms.includes(now)){
-        console.log('ringing...');
+        // console.log('ringing...');
         ringing(now);
     }
 
@@ -104,9 +104,9 @@ function ringing(now){
 
 // delete an alarm
 alarmList.addEventListener('click', function(event){
-    // using event delegation on ul to select the specific delete button
     // console.log(event.target);
 
+    // using event delegation on ul to select the specific delete button
     if(event.target.classList.contains('delete')){
         // select the specific li
         const targetedLi = event.target.parentNode;
