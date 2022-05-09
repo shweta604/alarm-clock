@@ -117,10 +117,20 @@ alarmList.addEventListener('click', function(event){
         const targetedLi = event.target.parentNode;
         // console.log(targetedLi);
         targetedLi.remove();
+
+        // remove the specific element associated with the delete button on which the user has clicked from array
+        const span = event.target.previousElementSibling; // this will give us the alarm time
+        // console.log(span.innerHTML);
+        const time = span.innerHTML;
+
+        // find the specific index of the alarm time and remove it
+        const index = alarms.indexOf(time);
+        // console.log(index);
+        if (index > -1) {
+            alarms.splice(index, 1);
+        }
     }
 });
-
-// remove the targeted time from the alarms array
 
 
 // turn off the alarm
